@@ -29,4 +29,13 @@ public class Rota {
 	public Aeronave getAeronave() {
 		return aeronave;
 	}
+
+	public String toString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append("CIA: ").append(cia)
+			.append("Destino: ").append(destino)
+				.append("Origem: ").append(origem)
+					.append("Aeronave: ").append(aeronave);
+		return sb.toString();
+	}
 }

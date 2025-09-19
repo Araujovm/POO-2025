@@ -21,8 +21,8 @@ public class GerenciadorAeroportos {
         sb.append("\n");
 
         for(Aeroporto a:aeroP){
-            sb.append("Codigo: "+ a.getCodigo() + " Nome: " + a.getNome() + " Localização: " + a.getLocal());
-            sb.append("\n");
+            sb.append("Codigo: "+ a.getCodigo() + " Nome: " + a.getNome() + " Localização: " + a.getLocal())
+                .append("\n");
         }
         return sb.toString();
     }

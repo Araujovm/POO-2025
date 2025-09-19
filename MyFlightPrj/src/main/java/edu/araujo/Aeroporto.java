@@ -23,4 +23,13 @@ public class Aeroporto {
 	public Geo getLocal() {
 		return loc;
 	}
+
+	public String toString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append("Aeroporto[codigo: ").append(codigo)
+		  	.append(", nome: ").append(nome)
+		  		.append(", local: ").append(loc).append("]")
+					.append("\n");
+		return sb.toString();
+	}
 }

@@ -17,4 +17,12 @@ public class CiaAerea {
 	public String getNome() {
 		return nome;
 	}	
+
+	public String toString(){
+		StringBuilder sb = new StringBuilder();
+		sb.append("Cia[Codigo: ").append(codigo)
+			.append(", Nome: ").append(nome)
+				.append("\n");
+		return sb.toString();
+	}
 }

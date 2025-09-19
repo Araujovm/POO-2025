@@ -17,4 +17,11 @@ public class Geo {
 	public double getLongitude() {
 		return longitude;
 	}
+		@Override
+		public String toString() {
+				StringBuilder sb = new StringBuilder();
+				sb.append("Latitude: ").append(latitude)
+					.append(", Longitude: ").append(longitude);
+				return sb.toString();
+		}
 }

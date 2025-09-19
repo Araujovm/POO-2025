@@ -17,16 +17,16 @@ public class GerenciadorRotas {
     public String listarRotas(){
         StringBuilder sb = new StringBuilder();
 
-        sb.append("Lista das Rotas");
-        sb.append("\n");
+        sb.append("Lista das Rotas")
+            .append("\n");
         for(Rota r:rotas){
-            sb.append("CIA: " + r.getCia() + " Origem: " + r.getOrigem() + " Destino" + r.getDestino() + "Aeronave: " + r.getAeronave());
-            sb.append("\n");
+            sb.append("CIA: " + r.getCia() + " Origem: " + r.getOrigem() + " Destino: " + r.getDestino() + "Aeronave: " + r.getAeronave())
+                .append("\n");
         }
         return sb.toString();
     }
 
-    public Rota buscarPorOrigem(String origem){
+    public Rota buscarPorOrigem(Aeroporto origem){
         
         for(Rota r:rotas){
             if(r.getOrigem().equals(origem)){

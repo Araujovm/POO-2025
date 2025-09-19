@@ -14,14 +14,14 @@ public class GerenciadorAeronaves {
         aeronaves.add(aeronave);
     }
 
-    public String listarTodos(){
+    public String listarAeronaves(){
         StringBuilder sb = new StringBuilder();
 
         sb.append("Lista de aviões: ");
         sb.append("\n");
         for (Aeronave a:aeronaves){
-            sb.append("Codigo: " + a.getCodigo() + " Descrição: "+ a.getDescricao() + " Capacidade: " + a.getCapacidade());
-            sb.append("\n");
+            sb.append("Codigo: " + a.getCodigo() + " Descrição: "+ a.getDescricao() + " Capacidade: " + a.getCapacidade())
+                .append("\n");
         }
         return sb.toString();
     }
