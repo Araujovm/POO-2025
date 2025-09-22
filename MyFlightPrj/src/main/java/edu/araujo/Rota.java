@@ -35,7 +35,8 @@ public class Rota {
 		sb.append("CIA: ").append(cia)
 			.append("Destino: ").append(destino)
 				.append("Origem: ").append(origem)
-					.append("Aeronave: ").append(aeronave);
+					.append("Aeronave: ").append(aeronave)
+						.append("\n");
 		return sb.toString();
 	}
 }
