@@ -47,7 +47,7 @@ public class VooEscalas extends Voo {
         sb.append("Data e Horario: ").append(getDatahora()).append(" Duração: ").append(getDuracao()).append("\n");
         for(Rota r:rotas){
             sb.append("Rota ").append(i).append(" : ").append(r)
-                .append("\n");
+                    .append("\n");
                 i++;
         }
         return sb.toString();

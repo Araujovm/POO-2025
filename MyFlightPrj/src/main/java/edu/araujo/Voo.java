@@ -37,8 +37,7 @@ public abstract class Voo {
 		sb.append("Data e Horario: ").append(datahora)
 			.append(" Duração: ").append(getDuracao())
 				.append(" Status: ").append(status)
-					.append(" Rota: ").append(getRota())
-						.append("\n");
+					.append(" Rota: ").append(getRota());
 		return sb.toString();
 	}
 }

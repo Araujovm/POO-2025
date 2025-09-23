@@ -16,7 +16,7 @@ public class App {
 		g.addAeronave(a3);
 		System.out.println(g.listarAeronaves());
 		System.out.println("\n");
-
+		// Testar Gerenciador de cias
 		CiaAerea c1 = new CiaAerea("7890", "Docinhos da Vovo");
 		GerenciadorCias Gc = new GerenciadorCias();
 		Gc.addCia(c1);

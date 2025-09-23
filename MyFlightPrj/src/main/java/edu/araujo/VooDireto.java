@@ -1,7 +1,6 @@
 package edu.araujo;
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 public class VooDireto extends Voo{
 
@@ -30,7 +29,9 @@ public class VooDireto extends Voo{
 
 	public String toString(){
 		StringBuilder sb = new StringBuilder();
-		sb.append(super.toString()).append("\n");
+		sb.append(super.toString())
+			.append(",Duração: ").append(duracao)
+				.append("\n");
 		return sb.toString();
 	}
 }
