@@ -44,13 +44,12 @@ public class App {
 				return p.getGenero() == Genero.MASC && p.getIdade() >= 18 && p.getIdade() <= 25;
 			}
 		});
-
+*/
 		System.out.println();
 		System.out.println("Pessoas aptas para serviço militar (usando expressão lambda):");
 		cad.exibePessoas((Pessoa p) -> p.getGenero() == Genero.MASC
-				&& p.getIdade() >= 18
-				&& p.getIdade() <= 25);
-
+				&& p.getIdade() >= 18);
+/* 
 		System.out.println();
 		System.out.println("Pessoas aptas para serviço militar (usando expressão lambda e interface Predicate):");
 		cad.exibePessoasPredicate((Pessoa p) -> p.getGenero() == Genero.MASC
