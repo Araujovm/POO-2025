@@ -2,6 +2,8 @@ package aagustini.poo;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.Comparator;
 
 public class App {
 
@@ -29,22 +31,75 @@ public class App {
          *        apenas expressões lambda e operações de agregação
           */
         System.out.println("\n1. Funcionários do setor de vendas:");
+            lista.stream()
+                 .filter(p -> p.getDpto() == Departamento.VENDAS)
+                 .forEach(System.out::println);
+                                        
+        System.out.println("\n");
 
         System.out.println("\n2. Funcionários do setor de vendas com idade entre 20 e 30 anos");
+            lista.stream()
+                 .filter(p ->p.getDpto() == Departamento.VENDAS 
+                 && p.getIdade() >= 20 && p.getIdade()<= 30)
+                 .forEach(System.out::println);
+
+        System.out.println("\n");
 
         System.out.println("\n3. Nomes (em maiúsculas) dos funcionários do setor de vendas");
+            lista.stream()
+                 .filter(p ->p.getDpto() == Departamento.VENDAS)
+                 .forEach(p->System.out.println(p.getNome().toUpperCase()));
+
+        System.out.println("\n");
 
         System.out.println("\n4. Todos os gerentes:");
+            lista.stream()
+                 .filter(p->p.getDpto() == Departamento.GERENCIA)
+                 .forEach(System.out::println);
+
+        System.out.println("\n");
 
         System.out.println("\n5. Idade média dos gerentes:");
+            double IdadeMedia = lista.stream()
+                 .filter(p->p.getDpto() == Departamento.GERENCIA)
+                 .mapToInt(p->p.getIdade())
+                 .average()
+                 .getAsDouble();
+                 System.out.println(IdadeMedia);
+
+        System.out.println("\n");
 
         System.out.println("\n6. Funcionarios ordenados pelo código:");
+            lista.stream()
+                 .sorted(Comparator.comparing(Pessoa::getCodigo))
+                 .forEach(System.out::println);
+        
+        System.out.println("\n");
 
         System.out.println("\n7. Funcionários ordenados pela idade+nome:");
+            lista.stream()
+                 .sorted(Comparator.comparing(Pessoa::getIdade)
+                    .thenComparing(Pessoa::getNome))
+                 .forEach(System.out::println);
+
+        System.out.println("\n");
 
         System.out.println("\n8. Criar uma nova lista apenas com os funcionarios do financeiro:");
+            List<Pessoa> financeiros = lista.stream()
+                                            .filter(p -> p.getDpto() == Departamento.FINANCEIRO)
+                                            .toList();
+                                            System.out.println(financeiros);
+
+        System.out.println("\n");
 
         System.out.println("\n9. Nome e setor da pessoa mais jovem:");
+            Pessoa menor = lista.stream()
+                 .min(Comparator.comparing(Pessoa::getIdade))
+                 .orElse(null);
+                 System.out.println(menor);
+
+                 
+
 
 
     }

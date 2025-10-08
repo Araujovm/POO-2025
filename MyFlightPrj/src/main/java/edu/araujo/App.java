@@ -7,9 +7,9 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		Aeronave a1 = new Aeronave("251","cu",45);
-		Aeronave a2 = new Aeronave("252","cacete",39);
-		Aeronave a3 = new Aeronave("253","pau",89);
+		Aeronave a1 = new Aeronave("251","santos",45);
+		Aeronave a2 = new Aeronave("252","enzo",39);
+		Aeronave a3 = new Aeronave("253","jorje",89);
 		GerenciadorAeronaves g = new GerenciadorAeronaves();
 		g.addAeronave(a1);
 		g.addAeronave(a2);
